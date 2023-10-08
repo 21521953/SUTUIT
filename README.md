@@ -1,1 +1,1 @@
-# A website for joob seeker
+ A website for job seeker
