@@ -4,3 +4,41 @@ npm i --save-dev nodemon ( npm start)
 npm install express-handlebars
 git pull origin main --allow-unrelated-histories //resolve merging
 npm install mongoose --save
+
+
+   const limit = 5;
+        const thisPage = 1;
+        const list = document.querySelectorAll('.job-list .job-list-item');
+
+        function loadItem() {
+            let beginPage = limit * ( thisPage - 1);
+            let endPage = (limit * thisPage) - 1;
+            list.forEach((item, index) =>{
+                if(index >= beginPage && index <= endPage) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            })
+            listPage();
+        }
+
+        loadItem();
+
+        function listPage () {
+            let count =  list.length / limit ;
+            document.querySelector('.listPage').innerHTML = '';
+            for( i = 1; i <= count; i++) {
+                let newPage = document.createElement('li');
+                newPage.innerText = i;
+                if(i == thisPage) {
+                    newPage.classList.add('active');
+                }
+                newPage.setAttribute('onclick', "changePage("+ i + ")");
+                document.querySelector('.listPage').appendChild(newPage);
+            }
+            function changePage(i) {
+                thisPage = i;
+                loadItem();
+             }
+        } 

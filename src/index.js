@@ -28,4 +28,4 @@ app.set('views', path.join(__dirname,'resources/views'));
 // rout init
 route(app);
 
-app.listen(port, () => { console.log(`http://localhost:${port}/`)})
+app.listen(port, () => { console.log(`http://localhost:${port}/?q=1`)})

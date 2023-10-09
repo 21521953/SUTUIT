@@ -28,17 +28,13 @@
   border-radius: 5px; }
 
 .job-list {
-  color: #3a3a39;
-  padding: 0 20px;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(76, 159, 91, 0.75);
-  border-radius: 2px;
-  border: 1px solid rgba(149, 224, 169, 0.3); }
+  color: black;
+  padding: 0 20px; }
 
 .job-list-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 10px 0;
   padding: 5px 5px; }
 
@@ -46,6 +42,9 @@
   display: flex;
   width: 70%;
   align-items: center; }
+
+.company-img {
+  width: 30%; }
 
 .company-info {
   padding: 5px 10px; }
@@ -57,8 +56,7 @@
 
 .right-side {
   text-align: center;
-  display: block;
-  width: 300px; }
+  display: block; }
 
 .right-side p {
   padding: 3px 0; }
@@ -70,7 +68,7 @@
   display: none; }
 
 .right-container:hover .appear {
-  display: block; }
+  display: flex; }
 
 .btn-item {
   padding: 7px 10px;
@@ -79,4 +77,17 @@
   border: 1px solid #ddd;
   background-color: #0b5339;
   color: #ddd;
+  cursor: pointer;
+  font-size: 12px; }
+
+.listPage {
+  display: flex;
+  justify-content: center; }
+
+.listPage-item {
+  list-style: none;
+  background-color: #1c782a;
+  color: black;
+  padding: 15px;
+  margin: 0 5px;
   cursor: pointer; }

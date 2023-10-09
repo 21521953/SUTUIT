@@ -13,6 +13,7 @@
     margin: 20px 20px;
     display: flex;
     justify-content: center;
+
 }
 .job-show {
     width: 50%;
@@ -34,17 +35,18 @@
 
 }
 .job-list {
-    color: rgb(58, 58, 57);
+    color: rgb(0, 0, 0);
     padding: 0 20px;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(76, 159, 91, 0.75);
-    border-radius: 2px;
-    border: 1px solid rgba(149, 224, 169, 0.3);
+    // backdrop-filter: blur(16px) saturate(180%);
+    // -webkit-backdrop-filter: blur(16px) saturate(180%);
+    // background-color: rgba(76, 159, 91, 0.75);
+    // border-radius: 2px;
+    // border: 1px solid rgba(149, 224, 169, 0.3);
 }
 .job-list-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 10px 0;
     padding: 5px 5px;
     // background-color: rgb(99, 97, 97);A3C686
@@ -56,7 +58,7 @@
     align-items: center;
 }
 .company-img {
-
+    width: 30%;
 }
 .company-info {
     padding: 5px 10px;
@@ -69,7 +71,7 @@
 .right-side {
     text-align: center;
     display: block;
-    width:300px;
+    // width:300px;
 }
 .right-side p {
     padding: 3px 0;
@@ -82,7 +84,7 @@
     display: none;
 }
 .right-container:hover .appear{
-    display: block;
+    display: flex;
 }
 
 .btn-item {
@@ -92,6 +94,21 @@
     border: 1px solid #ddd;
     background-color: rgb(11, 83, 57);
     color: #ddd;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
+.listPage {
+    display: flex;
+    justify-content: center;
+}
+.listPage-item {
+    list-style: none;
+    background-color: #1c782a;
+    color: black;
+    padding: 15px;
+    margin: 0 5px;
     cursor: pointer;
 }
 

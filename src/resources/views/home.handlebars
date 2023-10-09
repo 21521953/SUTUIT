@@ -8,44 +8,63 @@
         <div class="job-search">
             <input class="search-box" type="text" value="" placeholder="Search job title.....">
         </div>
-        <div class="job-list">
-                        <div class="job-list-item">
-                <div class="left-side">
-                    <img class="company-img" src="https://cdn-new.topcv.vn/unsafe/150x/filters:format(webp)/https://static.topcv.vn/company_logos/cong-ty-tnhh-volio-viet-nam-60c026311c6ea.jpg" alt="">
-                    <div class="company-info">
-                         <h3>Company name</h3>
-                         <p>Job title</p>
-                    </div>
-                </div>
-                <div class="right-container">
-                    <div class="right-side">
-                        <p>Location</p>
-                        <p>Time</p>
-                    </div>  
-                     <a class="appear has-link btn-item">Apply now</a>
-                     <a class="appear has-link btn-item">Take test</a>
-                </div>
-            </div>
+    {{#each company}}
+        <div class="job-list" >
             <div class="job-list-item">
                 <div class="left-side">
-                    <img class="company-img" src="https://cdn-new.topcv.vn/unsafe/150x/filters:format(webp)/https://static.topcv.vn/company_logos/cong-ty-tnhh-volio-viet-nam-60c026311c6ea.jpg" alt="">
+                    <img class="company-img" src="/img/images.png" alt="">
                     <div class="company-info">
-                         <h3>Company name</h3>
-                         <p>Job title</p>
+                         <h3>{{this.Company}}</h3>
+                         <p>{{this.Title}}</p>
                     </div>
                 </div>
                 <div class="right-container">
                     <div class="right-side">
-                        <p>Location</p>
-                        <p>Time</p>
+                        <p>{{this.Location}}</p>
+                        <p>{{this.Salary}}</p>
                     </div>  
                      <a class="appear has-link btn-item">Apply now</a>
                      <a class="appear has-link btn-item">Take test</a>
                 </div>
             </div>
         </div>
+        {{/each}}
+        <form action="/" method="GET">
+            <div class="listPage">
+                <input class="totalpage" type="submit" name="q" style="display:none" value="{{tongSoPage}}">
+            </div>
+        </form>
     </div>
     <div class="job-filter">
         <h3>filter</h3>
     </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const totalPage = document.querySelector('.totalpage').value;
+    const Wrapitem = document.querySelector('.listPage');
+  
+    function loadPage() {
+        for (let i = 1; i <= totalPage; i++) {
+            const numberPage = document.createElement('input');
+           
+            numberPage.setAttribute("type","submit");
+            numberPage.setAttribute("value",i);
+            numberPage.setAttribute("name","q");
+            numberPage.classList.add('listPage-item');
+            numberPage.addEventListener('click', function() {
+                handlePageClick(i);
+            });
+            Wrapitem.appendChild(numberPage);  // Append numberPage inside the loop
+        }
+    }
+
+    function handlePageClick(pageNumber) {
+        console.log('Clicked on page:', pageNumber);
+
+    }
+            loadPage();
+    // Call the loadPage function to generate page buttons
+
+});//end
+</script>
