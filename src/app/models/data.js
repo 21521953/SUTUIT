@@ -9,7 +9,7 @@ const data = new Schema ({
     Location : {type: String},
     JobDescription : {type : String},
     RequiredQual : {type: String},
-    Salary : {type: Number},
+    Salary : {type: String},
     ApplicationP : {type:String},
     Company_img :{type:String}
 })

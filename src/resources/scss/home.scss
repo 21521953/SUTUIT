@@ -12,12 +12,11 @@
 .job-wrapper{
     margin: 20px 20px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
 
 }
 .job-show {
-    width: 50%;
-
+    width: 70%;
 }
 
 .job-search {
@@ -27,43 +26,49 @@
    padding-bottom: 20px;
 }
 .search-box {
-    width: 70%;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-.search-box {
 
+    width: 67%;
+    padding: 15px 40px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
 }
 .job-list {
     color: rgb(0, 0, 0);
     padding: 0 20px;
-    // backdrop-filter: blur(16px) saturate(180%);
-    // -webkit-backdrop-filter: blur(16px) saturate(180%);
-    // background-color: rgba(76, 159, 91, 0.75);
-    // border-radius: 2px;
-    // border: 1px solid rgba(149, 224, 169, 0.3);
+    display: flex;
+    justify-content: center;
 }
 .job-list-item {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 80%;
     margin: 10px 0;
-    padding: 5px 5px;
-    // background-color: rgb(99, 97, 97);A3C686
- 
+    padding: 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 .left-side {
     display: flex;
     width: 70%;
     align-items: center;
 }
+.img-container{ 
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
 .company-img {
-    width: 30%;
+    max-width: 100px;
+    height: 100px;
 }
 .company-info {
     padding: 5px 10px;
+    text-align: left;
+    width: 200px;
 }
 .right-container {
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,8 +78,10 @@
     display: block;
     // width:300px;
 }
-.right-side p {
+.right-side li {
     padding: 3px 0;
+    list-style: none;
+    cursor: pointer;
 }
 
 .appear {
@@ -88,30 +95,35 @@
 }
 
 .btn-item {
-    padding: 7px 10px;
+    padding: 10px 15px;
     margin: 0px 5px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: rgb(11, 83, 57);
-    color: #ddd;
+    border-radius: 16px;
+    border: 1px solid #0c0909;
+    // background-color: rgb(83, 80, 80);
+    color: #0d0a0a;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 13px;
 
 }
-
+.btn-item:hover {
+    background-color: #ddd;
+}
 .listPage {
     display: flex;
     justify-content: center;
 }
 .listPage-item {
     list-style: none;
-    background-color: #1c782a;
+    background-color: #c0cec2;
     color: black;
-    padding: 15px;
+    padding: 13px;
     margin: 0 5px;
     cursor: pointer;
 }
+.listPage-item:hover {
+    background-color: #4b504c;
 
+}
 .job-filter {
 
 }

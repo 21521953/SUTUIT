@@ -12,19 +12,21 @@
         <div class="job-list" >
             <div class="job-list-item">
                 <div class="left-side">
-                    <img class="company-img" src="/img/images.png" alt="">
+                    <div class="img-container"><img class="company-img" src="{{this.Company_img}}" alt=""></div>
                     <div class="company-info">
-                         <h3>{{this.Company}}</h3>
-                         <p>{{this.Title}}</p>
+                         <h3>{{this.Title}}</h3>
+                         <p>{{this.Company}}</p>
                     </div>
                 </div>
                 <div class="right-container">
-                    <div class="right-side">
-                        <p>{{this.Location}}</p>
-                        <p>{{this.Salary}}</p>
-                    </div>  
-                     <a class="appear has-link btn-item">Apply now</a>
-                     <a class="appear has-link btn-item">Take test</a>
+                    <ul class="right-side">
+                        <li>{{this.Location}}</li>
+                        <li>{{this.Salary}}</li>
+                    </ul>  
+                   <div class="appear">
+                     <a class="appear has-link btn-item" href="/home/{{this._id}}">Apply now</a>
+                     <a class="appear has-link btn-item">View job</a>
+                   </div>
                 </div>
             </div>
         </div>
