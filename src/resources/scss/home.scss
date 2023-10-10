@@ -124,6 +124,69 @@
     background-color: #4b504c;
 
 }
-.job-filter {
 
+// filter
+.job-filter {
+    border: 1px solid #ddd;
+    width: 20%;
+    padding: 20px 0px;
+    height: fit-content;
+    // text-align: center;
+    margin-top: 77px;
+    border-radius: 5px;
+}
+.check-box-group{ 
+    display: flex;
+    flex-direction: column;
+    color: #2b2727;
+}
+.check-box-label {
+    padding: 5px 3px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.check-box-label input {
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+}
+.space {
+    transform: translateX(20px);
+    margin: 30px 0;
+    width: 85%;
+    height: 1px;
+    background-color: red;
+}
+.location{
+    margin-left: 25px;
+}
+.js-location {
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 25px;
+    padding: 5px 10px;
+    
+}
+.js-contract-or-intern{
+
+}
+.submit-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.js-submit{ 
+   width: 80%;
+   padding: 10px 20px;
+   border-radius: 99999px;
+   background: #0d0c22;
+   color: #fff;
+   font-weight: 600;
+   line-height: 28px;
 }

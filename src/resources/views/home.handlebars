@@ -37,8 +37,34 @@
             </div>
         </form>
     </div>
+  
     <div class="job-filter">
-        <h3>filter</h3>
+     <form action="/" method="GET">
+        {{#each company}}
+            <div class="check-box-group">
+                <label class="check-box-label" for="job_1">
+                    <input class="check-box-js" type="checkbox" value="1" name="" id=""> {{this.Title}}
+                </label>
+            </div>
+        {{/each}}
+            <div class="space"></div>
+            <label class="location" for="location">Location : </label>
+            <input type="text" name="location" class="js-location" placeholder="Enter Location ...">
+            <div class="space"></div>
+            <label class="check-box-label js-contract-or-intern" for="fulltime">
+                    <input class="" name="contract-or-intern" type="checkbox" value="true" name="fulltime" id=""> 
+                    <span>Fulltime</span>
+            </label>
+            <label class="check-box-label js-contract-or-intern" for="intern">
+                    <input class="" name="contract-or-intern" type="checkbox" value="true" name="intern" id=""> 
+                    <span>Intern</span>
+            </label>
+            <div class="space"></div>
+            <div class="submit-container">
+                <input type="submit" class="js-submit" value="Filter" >
+                <a href="/"></a>
+            </div>
+        </form>
     </div>
 </div>
 <script>

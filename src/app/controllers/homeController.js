@@ -1,5 +1,6 @@
 const { query } = require('express');
 const Company = require('../models/data');
+const data = require('../models/data');
 
 const Page_size = 5;
 
@@ -25,19 +26,22 @@ class homeController {
                                 tongSoPage : tongSoPage
                             })
                         })
-                
                 })
                 .catch(next);
-            }
-        // } else {
-        //     Company.find({}).exec()
-        //         .then(companies => {
-        //             res.json(companies);
-        //         })
-        //         .catch(next);
-        // }
-     
+            } 
     }
+
+    // //get /:
+    // search(req,res,nex) {
+    //     Company.find({}).exec()
+    //     .then(companies => {
+    //         companies = companies.map(Company => Company.toObject());
+    //         res.render('home.handlebars',{
+    //             companies : companies
+    //         })
+    //     })
+    // }
+
 }
 
 module.exports = new homeController();
