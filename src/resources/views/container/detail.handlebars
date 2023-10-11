@@ -1,1 +1,51 @@
-<h3> details page</h3>
+<div class="back-button">
+    <a href="/?q=1" class="btn button">All job</a>
+</div>
+<div class="job-name">
+    <h8 class="detail-heading">Job Details</h8>
+    <h2 class="detail-heading">{{this.Position}}</h2>
+</div>
+<div class="job-link">
+    <a href="" class=" btn link-social">Facebook</a>
+    <a href="" class=" btn link-social">Linkedin</a>
+</div>
+<div class="detail-wrap">
+    <div class="detail-wrap-item">
+        <div class="job-left">
+            <h3 class="detail-heading">Chi tiết tuyển dụng</h3>
+            <div class="job-item">
+                    <h3 class="item-heading">Mô tả công việc : </h3>
+                    <p class="item-text">{{this.MoTa}}</p>
+            </div>
+            <div class="job-item">
+                    <h3 class="item-heading">Yêu cầu công việc : </h3>
+                    <p class="item-text">{{this.YeuCau}}</p>
+            </div>
+            <div class="job-item">
+                    <h3 class="item-heading">Quyền lợi: </h3>
+                    <p class="item-text">{{this.Benefit}}</p>
+            </div>
+        </div>
+        <div class="apply-btn">
+            <a href="/home/{{this._id}}/{{this.TenCongTy}}/chat" class="button has-link js-apply">Apply now </a>
+        </div>
+    </div>
+    <div class="job-right">
+        <div class="company-container">
+            <img class="company-container-img" src="{{this.CongTyImg}}" alt="">
+            <h4 class="tencongty">{{this.TenCongTy}}</h4>
+        </div>
+        <div class="space"></div>
+             <a href="" class=" button  js-view-company">View Company</a>
+        <div class="space"></div>
+        <div class="detail-item">
+            <h4>Job Type</h4>
+            <p>{{this.Time}}</p>
+        </div>
+        <div class="detail-item">
+            <h4>Địa điểm</h4>
+            <p>{{this.DiaDiem}}</p>
+        </div>
+    </div>
+</div>
+.

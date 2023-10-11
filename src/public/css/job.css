@@ -1,0 +1,82 @@
+.back-button {
+  margin: 30px 20px; }
+
+.button {
+  padding: 10px 20px;
+  border-radius: 9999px;
+  background-color: #A3C686;
+  color: #000;
+  text-decoration: none; }
+
+.button:hover {
+  background-color: #83a16b; }
+
+.job-name {
+  margin: 20px 45px; }
+
+.job-link {
+  margin: 20px 35px;
+  display: flex; }
+
+.link-social {
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  padding: 15px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  color: #4f4d4d; }
+
+.detail-heading {
+  padding: 10px 10px; }
+
+.detail-wrap {
+  display: flex;
+  margin: 40px 35px; }
+
+.detail-wrap-item {
+  width: 70%; }
+
+.job-left {
+  padding: 10px 20px; }
+
+.job-item {
+  padding: 20px 10px; }
+
+.item-heading {
+  padding: 5px 0; }
+
+.job-right {
+  transform: translateY(-60px);
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0; }
+
+.company-container {
+  text-align: center; }
+
+.tencongty {
+  padding: 10px 0;
+  width: 200px; }
+
+.js-view-company {
+  margin: 20px 28px; }
+
+.apply-btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; }
+
+.js-apply {
+  align-items: center;
+  padding: 15px 30px; }
+
+.detail-item {
+  padding: 10px 0; }
+
+.detail-item h4 {
+  padding: 10px 0; }
+
+.detail-item p {
+  width: 150px;
+  text-align: justify; }

@@ -1,6 +1,8 @@
+
 const { query } = require('express');
-const Company = require('../models/data');
-const data = require('../models/data');
+const Job = require('../models/Job');
+const linhvuc = require('../models/linhvuc');
+
 
 const Page_size = 5;
 
@@ -14,33 +16,33 @@ class homeController {
             }
             var skipNumber = Page_size * ( page -1 );
             
-            Company.find({}).skip(skipNumber).limit(Page_size).exec()
+            Job.find({}).skip(skipNumber).limit(Page_size).exec()
                 .then (datas => {
-                    Company.countDocuments({})
+                linhvuc.find({}).exec()
+                    .then(linhvucs => {
+                        Job.countDocuments({})
                         .then((total) => {
                             var tongSoPage = Math.ceil(total/Page_size);
                             datas = datas.map(Company => Company.toObject());
-                           
+                            linhvucs = linhvucs.map(linhvuc => linhvuc.toObject());
                             res.render('home.handlebars',{
                                 company : datas,
+                                linhvuc : linhvucs,
                                 tongSoPage : tongSoPage
                             })
                         })
+                        .catch(next);
+                    })
+                    .catch(next);
                 })
                 .catch(next);
             } 
     }
 
     // //get /:
-    // search(req,res,nex) {
-    //     Company.find({}).exec()
-    //     .then(companies => {
-    //         companies = companies.map(Company => Company.toObject());
-    //         res.render('home.handlebars',{
-    //             companies : companies
-    //         })
-    //     })
-    // }
+    filter(req, res,next) {
+        res.json(req.query.q)
+    }
 
 }
 

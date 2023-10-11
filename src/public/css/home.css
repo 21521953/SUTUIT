@@ -49,13 +49,13 @@
   align-items: center; }
 
 .img-container {
-  width: 200px;
+  width: 150px;
   display: flex;
   justify-content: center; }
 
 .company-img {
-  max-width: 100px;
-  height: 100px; }
+  max-width: 50px;
+  height: 50px; }
 
 .company-info {
   padding: 5px 10px;
@@ -146,7 +146,7 @@
   margin: 30px 0;
   width: 85%;
   height: 1px;
-  background-color: red; }
+  background-color: #888282; }
 
 .location {
   margin-left: 25px; }

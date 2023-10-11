@@ -12,20 +12,20 @@
         <div class="job-list" >
             <div class="job-list-item">
                 <div class="left-side">
-                    <div class="img-container"><img class="company-img" src="{{this.Company_img}}" alt=""></div>
+                    <div class="img-container"><img class="company-img" src="{{this.CongTyImg}}" alt=""></div>
                     <div class="company-info">
-                         <h3>{{this.Title}}</h3>
-                         <p>{{this.Company}}</p>
+                         <h3>{{this.Position}}</h3>
+                         <p>{{this.TenCongTy}}</p>
                     </div>
                 </div>
                 <div class="right-container">
                     <ul class="right-side">
-                        <li>{{this.Location}}</li>
-                        <li>{{this.Salary}}</li>
+                        <li>{{this.DiaChi}}</li>
+                        <li>{{this.Luong}}</li>
                     </ul>  
                    <div class="appear">
-                     <a class="appear has-link btn-item" href="/home/{{this._id}}">Apply now</a>
-                     <a class="appear has-link btn-item">View job</a>
+                     <a class="appear has-link btn-item" href="/home/{{this._id}}">View job</a>
+                     <a class="appear has-link btn-item">Apply now</a>
                    </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@
   
     <div class="job-filter">
      <form action="/" method="GET">
-        {{#each company}}
+        {{#each linhvuc}}
             <div class="check-box-group">
                 <label class="check-box-label" for="job_1">
-                    <input class="check-box-js" type="checkbox" value="1" name="" id=""> {{this.Title}}
+                    <input class="check-box-js" type="checkbox" value=" {{this.TenLinhVuc}}" name="linhvuc" id=""> {{this.TenLinhVuc}}
                 </label>
             </div>
         {{/each}}
@@ -62,7 +62,6 @@
             <div class="space"></div>
             <div class="submit-container">
                 <input type="submit" class="js-submit" value="Filter" >
-                <a href="/"></a>
             </div>
         </form>
     </div>
