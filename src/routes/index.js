@@ -4,8 +4,10 @@ const detailRoute = require('./detailRoute');
 const assistanceRoute = require('./assistanceRoute');
 
 function route(app) {
+    
+    app.use('/', assistanceRoute)
     app.use('/home', detailRoute);
-    app.use('/signpage', signinRoute );
+    app.use('/', signinRoute );
     app.use('/',homeRoute);
 }
 

@@ -2,7 +2,10 @@ const account = require('../models/account');
 
 class signinController {
     sigin(req,res,next) {
-        res.send('sign in page');
+       account.find({}).exec()
+        .then(user => {
+            res.render('container/signinpage.handlebars',user);
+        })
     }
 }
 

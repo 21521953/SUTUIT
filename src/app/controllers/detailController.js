@@ -10,7 +10,7 @@ class detailController {
         .catch(next);
     }
 
-    chatbot(req,res,next) {
+    test(req,res,next) {
         job.find({}).exec()
         .then(job => {
             res.render('container/assistance.handlebars',job);
