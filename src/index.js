@@ -6,6 +6,9 @@ const morgan = require('morgan');
 const app = express();
 const port = 3000;
 const route = require('./routes');
+const server = require('http').Server(app)
+const io = require('socket.io')(server);
+
 
 app.use(express.static( path.join(__dirname,'public')))
 
@@ -24,8 +27,20 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname,'resources/views'));
 
+io.on('connection', (socket) => {
+    console.log('a user connected');
+  
+    socket.on('disconnect', () => {
+      console.log('user disconnected');
+    });
+  
+    socket.on('Chat message', (msg) => {
+      io.emit('Chat message', msg);
+    });
+  });
 
 // rout init
 route(app);
 
-app.listen(port, () => { console.log(`http://localhost:${port}/?q=1`)})
+
+server.listen(port, () => { console.log(`http://localhost:${port}/?q=1`)})

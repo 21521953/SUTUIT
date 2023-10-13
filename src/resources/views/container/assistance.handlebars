@@ -12,33 +12,32 @@
     </div>
     <div class="chat-container">
         <div class="chat-wrapper">
-            <div class="container-guest">
+            {{!-- <div class="container-guest">
                 <img class="chat-img" src="/img/images.png" alt="">
-                <div class="chat-box"></div>
-
-            </div>
-            <div class="container-host">
-                <div class="chat-box"></div>
-                <img class="chat-img " src="/img/images.png" alt="">
-            </div>
-            <div class="container-guest">
-                <img class="chat-img" src="/img/images.png" alt="">
-                <div class="chat-box"></div>
-            </div>
+                <div class="chat-box">aaa</div>
+            </div>  --}}
         </div>
+        <form id="form" action="">
         <div class="text-input">
-            <input class="input" type="text" placeholder="Start a message....">
+            <input autocomplete="off" id="input" class="input" type="text" placeholder="Start a message....">
             <div class="sending">
                 <i class="fa fa-send"></i>
             </div>
         </div>
+        </form>
     </div>
 </div>
+<script src="/socket.io/socket.io.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+    var socket = io ();
+   // const socket = io ("http://localhost:3000/chat");
     const reopen = document.querySelector('.reopen');
     const close = document.querySelector('.window');
     const history = document.querySelector('.history-wrapper');
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+    var chatContainer = document.querySelector('.chat-wrapper');
 
     close.addEventListener('click', () => {
         history.classList.add('hide');
@@ -48,5 +47,39 @@ document.addEventListener("DOMContentLoaded", function() {
         history.classList.remove('hide');
         reopen.style.display ='none';
     })
+
+    //input message
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if(input.value) {
+            socket.emit('Chat message' , input.value);
+            console.log(input.value)
+            input.value ='';
+        }
+    });
+
+    socket.on('Chat message' , function(msg) {
+        var container = document.createElement('div');
+        var item = document.createElement('div');
+            container.setAttribute('class', 'container-host')
+            item.setAttribute('id', 'message');
+            item.setAttribute('class', 'chat-box');
+            item.textContent = msg;
+       // console.log(item)
+        container.appendChild(item);
+        chatContainer.appendChild(container);
+    } )
+
+    socket.on('chat message server' , function(msg) {
+        var containerser = document.createElement('div');
+        var itemser = document.createElement('div');
+            containerser.setAttribute('class', 'container-guest')
+            itemser.setAttribute('id', 'message');
+            itemser.setAttribute('class', 'chat-box');
+            itemser.textContent = msg;
+       // console.log(item)
+        containerser.appendChild(item);
+        chatContainer.appendChild(containerser);
+    } ) 
 });//end
 </script>
