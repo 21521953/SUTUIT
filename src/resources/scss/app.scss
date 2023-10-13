@@ -53,10 +53,13 @@ body {
     font-weight: 700;
 }
 .btn-signin {
-    background-color: white;
+    background-color: rgb(78, 221, 78);
+    color: white;
+    border-radius: 9999px;
+    padding: 10px 15px;
 }
 .btn-signin:hover {
-    background-color: rgb(20, 71, 54);
+    
     color: white;
 }
 .btn-signup {

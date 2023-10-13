@@ -93,3 +93,101 @@
    width: 150px;
    text-align: justify;
 }
+
+// finding assistant
+
+.assistance-heading{
+    padding: 20px 0;
+    text-align: center;
+}
+.message-wrap {
+    display: flex;
+}
+.history-wrapper {
+    position: relative;
+    width: 25%;
+    background-color: #fefefe;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.chat-container{
+    width: 100%;
+    margin: 0 20px;
+}
+.chat-wrapper {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.container-guest {
+    display: flex;
+    align-items: center;
+}
+.chat-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 9999px;
+    border: 1px solid #000;
+    margin: 0 20px;
+}
+.chat-box {
+    width: 500px;
+    padding: 10px 10px;
+    background-color: #DADDE1;
+    height: fit-content;
+    border: 1px solid #DADDE1;
+}
+.container-host {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 10px;
+    
+}
+.text-input {
+    float: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input {
+    width: 70%;
+    padding: 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid #DADDE1;
+}
+.back-history {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.return {
+    border: 1px solid #3e3c3c;
+    padding: 15px 45px;
+    text-decoration: none;
+    color: rgb(25, 23, 23);
+}
+.icon {
+    margin-right: 10px;
+    color: #121111;
+}
+.window {
+    border: 1px solid #3e3c3c;
+    padding: 15px 20px;
+    margin: 0 10px;
+    color: rgb(10, 9, 9);
+    cursor: pointer;
+}
+.history-wrapper.hide  {
+    display: none;
+}
+.reopen {
+    display: none;
+    z-index: 100px;
+    color: rgb(14, 12, 12);
+    margin: 10px 20px ;
+}
+
+.re-window {
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+}

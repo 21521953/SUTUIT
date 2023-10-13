@@ -45,10 +45,12 @@
   font-weight: 700; }
 
 .btn-signin {
-  background-color: white; }
+  background-color: #4edd4e;
+  color: white;
+  border-radius: 9999px;
+  padding: 10px 15px; }
 
 .btn-signin:hover {
-  background-color: #144736;
   color: white; }
 
 .btn-signup {
